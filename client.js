@@ -19,8 +19,8 @@ conn.on('connect', () => {
  conn.write('Name: JLR');
 });
   // update connect function to handle data 
-  conn.on("data", (message) => {
-    console.log('Server says:', message);
+  conn.on("data", (msg) => {
+    console.log('Server says:', msg);
   });
 return conn;
 };

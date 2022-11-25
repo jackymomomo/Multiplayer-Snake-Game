@@ -12,7 +12,12 @@ const setupInput = (conn) => {
 
 module.exports = { setupInput }
 
-const handleUserInput = function (key) {
+
+
+
+
+
+const handleUserInput = function (key, message) {
   process.stdin.on('data', (key) => {
     process.stdout.write('')
     if (key === '\u0003'){
@@ -26,9 +31,11 @@ const handleUserInput = function (key) {
       connection.write('Move: down')
     } if (key === 'd'){
       connection.write('Move: right')
+    } if(key === 'T'){
+      connection.write('Say: I am snek king')
+    } if(key === 'S'){
+      connection.write('Say: Ur sooooo Bad')
     }
-    
-    console.log(key)
   })
 };
 
